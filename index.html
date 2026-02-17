@@ -1,49 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Laboratorio 2 - Eventos JS</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratorio 2 - Eventos en JavaScript</title>
+  <link rel="stylesheet" href="sytle.css">
 </head>
 <body>
 
-<h1>Laboratorio 2 - Eventos en JavaScript</h1>
+  <main class="page">
+    <h1 class="title">Laboratorio 2 </h1>
+    <p class="subtitle">Demostración de 8 eventos diferentes</p>
 
-<div class="contenedor">
+    <section class="grid">
 
-    <!-- 1 Click -->
-    <button id="btnClick">Haz Click</button>
+      <!-- 1 CLICK -->
+      <article class="card c1" id="cardClick" tabindex="0">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Haz clic aquí (evento click)</p>
+      </article>
 
-    <!-- 2 Mouseover -->
-    <div id="cajaHover" class="caja">Pasa el mouse aquí</div>
+      <!-- 2 MOUSEOVER -->
+      <article class="card c2" id="cardHover" tabindex="0">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Pasa el mouse aquí</p>
+      </article>
 
-    <!-- 3 Double Click -->
-    <p id="dobleClick">Haz doble click en este texto</p>
+      <!-- 3 DOBLE CLICK -->
+      <article class="card c3" id="cardDblClick" tabindex="0">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Haz doble clic aquí </p>
+      </article>
 
-    <!-- 4 Keyup -->
-    <input type="text" id="inputTexto" placeholder="Escribe algo">
+      <!-- 4 KEYUP -->
+      <article class="card c4">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Escribe en el campo</p>
+        <input class="input" id="inputKeyup" type="text" placeholder="Escribe algo..." />
+        <small class="hint" id="keyupHint">Esperando texto...</small>
+      </article>
 
-    <!-- 5 Change -->
-    <select id="selector">
-        <option value="">Seleccione un color</option>
-        <option value="red">Rojo</option>
-        <option value="blue">Azul</option>
-        <option value="green">Verde</option>
-    </select>
+      <!-- 5 FOCUS -->
+      <article class="card c5">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Selecciona el campo</p>
+        <input class="input" id="inputFocus" type="text" placeholder="Haz clic aquí..." />
+        <small class="hint" id="focusHint">No está seleccionado</small>
+      </article>
 
-    <!-- 6 Focus -->
-    <input type="email" id="correo" placeholder="Ingresa tu correo">
+      <!-- 6 BLUR -->
+      <article class="card c6">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Salir del campo</p>
+        <input class="input" id="inputBlur" type="number" placeholder="Ingresa tu edad..." />
+        <small class="hint" id="blurHint">Escribe tu edad y luego haz clic fuera</small>
+      </article>
 
-    <!-- 7 Blur -->
-    <input type="number" id="edad" placeholder="Ingresa tu edad">
+      <!-- 7 SUBMIT -->
+      <article class="card c7">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Enviar formulario</p>
+        <form id="formSubmit" class="form">
+          <input class="input" type="email" id="inputEmail" placeholder="Ingresa tu correo..." required />
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+        <small class="hint" id="submitHint">Formulario listo para enviar</small>
+      </article>
 
-    <!-- 8 Submit -->
-    <form id="formulario">
-        <button type="submit">Enviar Formulario</button>
-    </form>
+      <!-- 8 CHANGE -->
+      <article class="card c8">
+        <h2>EVENTO AQUÍ</h2>
+        <p>Cambiar valor (evento change)</p>
+        <select class="input" id="selectChange">
+          <option value="">Seleccione un color</option>
+          <option value="#FCE7F3">Rosado</option>
+          <option value="#DBEAFE">Azul</option>
+          <option value="#DCFCE7">Verde</option>
+          <option value="#FEF9C3">Amarillo</option>
+        </select>
+        <small class="hint" id="changeHint">Sin selección</small>
+      </article>
 
-</div>
+    </section>
+  </main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
